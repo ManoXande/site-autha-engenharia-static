@@ -1,0 +1,427 @@
+@import "tailwindcss";
+
+/* ============================================================
+   FONT-FACE — Atyp Display
+   ============================================================ */
+@font-face {
+  font-family: "Atyp Display";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/AtypDisplay-Light.woff2") format("woff2"),
+       url("/fonts/AtypDisplay-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Atyp Display";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/AtypDisplay-Medium.woff2") format("woff2"),
+       url("/fonts/AtypDisplay-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Atyp Display";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/AtypDisplay-Semibold.woff2") format("woff2"),
+       url("/fonts/AtypDisplay-Semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Atyp Display";
+  font-weight: 700;
+  font-style: normal;
+  font-display: optional;
+  src: url("/fonts/AtypDisplay-Bold.woff2") format("woff2"),
+       url("/fonts/AtypDisplay-Bold.ttf") format("truetype");
+}
+
+/* ============================================================
+   FONT-FACE — Atyp Text
+   ============================================================ */
+@font-face {
+  font-family: "Atyp Text";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/AtypText-Light.woff2") format("woff2"),
+       url("/fonts/AtypText-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Atyp Text";
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional;
+  src: url("/fonts/AtypText-Regular.woff2") format("woff2"),
+       url("/fonts/AtypText-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Atyp Text";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/AtypText-Medium.woff2") format("woff2"),
+       url("/fonts/AtypText-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Atyp Text";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/AtypText-Semibold.woff2") format("woff2"),
+       url("/fonts/AtypText-Semibold.ttf") format("truetype");
+}
+
+/* ============================================================
+   FONT-FACE — Fallback with size-adjust (eliminates CLS during font swap)
+   ============================================================ */
+@font-face {
+  font-family: "Atyp Display Fallback";
+  src: local("Arial"), local("Helvetica Neue"), local("sans-serif");
+  size-adjust: 97%;
+  ascent-override: 94%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+/* ============================================================
+   @THEME — Tailwind 4
+   ============================================================ */
+@theme {
+  --font-family-display: "Atyp Display", "Atyp Display Fallback", "Inter", system-ui, sans-serif;
+  --font-family-text: "Atyp Text", "Inter", system-ui, sans-serif;
+  --color-brand-primary: #4ADE80;
+  --color-brand-secondary: #6EE7B7;
+  --color-surface-deep: #030712;
+  --color-surface-primary: #0A0F1C;
+  --color-surface-elevated: #0F172A;
+  --color-content-primary: #F8FAFC;
+  --color-content-secondary: #94A3B8;
+  --color-content-muted: #64748B;
+}
+
+/* ============================================================
+   :ROOT — Design Tokens
+   ============================================================ */
+:root {
+  /* Colors */
+  --color-primary: #4ADE80;
+  --color-primary-hover: #22C55E;
+  --color-secondary: #6EE7B7;
+  --color-accent: #34D399;
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(135deg, #4ADE80 0%, #6EE7B7 100%);
+  --gradient-brand-hover: linear-gradient(135deg, #22C55E 0%, #4ADE80 100%);
+  --gradient-hero-overlay: linear-gradient(180deg, rgba(3,7,18,0.90) 0%, rgba(3,7,18,0.55) 35%, rgba(3,7,18,0.45) 62%, rgba(3,7,18,0.92) 100%);
+  --gradient-section-overlay: linear-gradient(180deg, rgba(3,7,18,0.75) 0%, rgba(3,7,18,0.30) 35%, rgba(3,7,18,0.20) 65%, rgba(3,7,18,0.70) 100%);
+  --gradient-contact-glow: radial-gradient(ellipse at 50% 60%, rgba(74,222,128,0.08) 0%, transparent 60%);
+
+  /* Backgrounds */
+  --bg-deep: #030712;
+  --bg-primary: #0A0F1C;
+  --bg-elevated: #0F172A;
+  --bg-surface: #1E293B;
+  --bg-glass: rgba(15,23,42,0.50);
+  --bg-glass-hover: rgba(15,23,42,0.60);
+  --bg-overlay-dark: rgba(3,7,18,0.65);
+  --bg-overlay-heavy: rgba(3,7,18,0.82);
+
+  /* Text */
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-on-brand: #0A0F1C;
+  --text-link: #4ADE80;
+  --text-link-hover: #6EE7B7;
+
+  /* Fonts */
+  --font-display: "Atyp Display", "Inter", system-ui, sans-serif;
+  --font-text: "Atyp Text", "Inter", system-ui, sans-serif;
+
+  /* Borders */
+  --border-subtle: rgba(248,250,252,0.06);
+  --border-default: rgba(248,250,252,0.10);
+  --border-hover: rgba(74,222,128,0.30);
+  --border-active: #4ADE80;
+  --border-input: rgba(248,250,252,0.12);
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* Container */
+  --container-max: 1280px;
+  --container-padding: clamp(20px, 4vw, 64px);
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Motion / Easing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-magnetic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 600ms;
+  --duration-section: 1200ms;
+  --duration-stagger: 80ms;
+  --duration-counter: 1800ms;
+  --duration-loading: 1500ms;
+
+  /* Glow */
+  --glow-xs: 0 0 6px rgba(74,222,128,0.10);
+  --glow-sm: 0 0 12px rgba(74,222,128,0.15);
+  --glow-md: 0 0 24px rgba(74,222,128,0.20);
+  --glow-lg: 0 0 48px rgba(74,222,128,0.25);
+  --glow-text: 0 0 40px rgba(74,222,128,0.12);
+
+  /* Blur */
+  --blur-glass: blur(16px);
+  --blur-header: blur(12px) saturate(180%);
+  --blur-mobile-menu: blur(20px) saturate(200%);
+
+  /* Z-index */
+  --z-bg: 0;
+  --z-overlay: 10;
+  --z-grain: 15;
+  --z-content: 20;
+  --z-nav-indicator: 40;
+  --z-header: 50;
+  --z-cursor: 60;
+  --z-loading: 80;
+  --z-modal: 100;
+  --z-skip: 9999;
+
+  /* Header */
+  --header-height: 72px;
+  --header-height-mobile: 60px;
+  --header-height-scrolled: 56px;
+  --header-bg-scrolled: rgba(3,7,18,0.80);
+}
+
+/* ============================================================
+   BASE RESET
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-text);
+  color: var(--text-primary);
+  background-color: var(--bg-deep);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   TYPOGRAPHY UTILITIES
+   ============================================================ */
+.font-display { font-family: var(--font-display); }
+.font-text { font-family: var(--font-text); }
+
+/* ============================================================
+   GRADIENT TEXT
+   ============================================================ */
+.text-gradient {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================================
+   SECTION LAYOUT
+   ============================================================ */
+.section-full {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
+.section-snap {
+  scroll-snap-align: start;
+}
+
+.section-bg {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-bg);
+}
+
+.section-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-overlay);
+}
+
+.section-content {
+  position: relative;
+  z-index: var(--z-content);
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* ============================================================
+   GRAIN OVERLAY — inline SVG filter
+   .grain-overlay::after  = per-element (legacy, kept for non-crossfade sections)
+   .grain-fixed           = global fixed layer in layout.tsx (Sprint 2)
+   ============================================================ */
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-grain);
+  opacity: 0.025;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* Single global grain — one layer for the whole viewport */
+.grain-fixed {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-grain, 15);
+  opacity: 0.028;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* ============================================================
+   GLASS CARD BASE
+   ============================================================ */
+.glass {
+  background: var(--bg-glass);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+}
+
+/* ============================================================
+   SKIP LINK
+   ============================================================ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: var(--z-skip);
+  background: var(--color-primary);
+  color: var(--text-on-brand);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-text);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ============================================================
+   FOCUS VISIBLE — GLOBAL
+   ============================================================ */
+*:focus-visible {
+  outline: 3px solid var(--border-active);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================================
+   SECTIONS CONTAINER — mobile scroll snap
+   ============================================================ */
+.sections-container {
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+@media (min-width: 1024px) {
+  .sections-container {
+    height: auto;
+    overflow-y: visible;
+    scroll-snap-type: none;
+  }
+}
+
+/* ============================================================
+   PREFERS-REDUCED-MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   IMAGE REVEAL — GSAP
+   ============================================================ */
+.image-reveal { will-change: clip-path; }
+
+/* ============================================================
+   @KEYFRAMES
+   ============================================================ */
+@keyframes scanLoading {
+  0%   { top: 0; opacity: 1; }
+  95%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes magneticPulse {
+  0%, 100% { transform: scale(1); box-shadow: var(--glow-sm); }
+  50%       { transform: scale(1.05); box-shadow: var(--glow-md); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.85); }
+}
+
+@keyframes whatsappPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.4); }
+  70%  { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
