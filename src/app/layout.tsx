@@ -168,11 +168,12 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
-        {/* Hero background preload — replaces Next.js Image priority since crossfadeManaged=true */}
+        {/* Hero background preload — aligned with the optimized crossfade asset */}
         <link
           rel="preload"
-          href="/images/sections/hero-drone-cidade.jpg"
+          href="/images/sections/optimized/hero-drone-cidade.webp"
           as="image"
+          type="image/webp"
           fetchPriority="high"
         />
         {/* Schema.org JSON-LD */}

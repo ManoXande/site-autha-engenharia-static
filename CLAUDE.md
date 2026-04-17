@@ -109,11 +109,36 @@ LenisProvider
 ## Imagens
 
 Imagens de fundo das seções ficam em `public/images/sections/[nome].jpg`.
-As 9 seções usam stock temporariamente — substituir por fotos reais da Autha/SC.
 
 Seções que usam crossfade gerenciado (`crossfadeManaged={true}`): `hero`, `manifesto`, `mapeamento`, `regularizacao`, `assistencia`, `infraestrutura`, `ambiental`.
 
 Seções com fundo sólido (sem imagem): `#impacto`, `#contato`.
+
+### Nomes canônicos dos arquivos (não renomear)
+
+Estes paths são referenciados em `src/lib/constants.ts`, `src/components/ui/BackgroundCrossfade.tsx`, `src/components/sections/HeroSection.tsx`, `src/components/sections/ManifestoSection.tsx` e `src/app/layout.tsx` (preload do hero):
+
+| Seção | Arquivo canônico em `public/images/sections/` |
+|---|---|
+| hero | `hero-drone-cidade.jpg` |
+| manifesto | `manifesto-authagraph.jpg` |
+| mapeamento | `mapeamento-lidar-pointcloud.jpg` |
+| regularizacao | `regularizacao-golden-hour.jpg` |
+| assistencia | `assistencia-pericia-mapa.jpg` |
+| infraestrutura | `infraestrutura-bim-lidar.jpg` |
+| ambiental | `ambiental-mata-atlantica.jpg` |
+
+### Protocolo para substituir imagens de fundo
+
+Ao receber novas imagens (ex.: pasta `imagens-boas/`), **sempre copiar sobrescrevendo o nome canônico acima** em vez de renomear. Isso evita editar 5+ arquivos de código.
+
+```bash
+cp -f "<origem>.jpg" "public/images/sections/<nome-canonico>.jpg"
+```
+
+Se a origem vier em outro formato (ex.: `.png`), copiar com `.jpg` na destination funciona — o navegador sniffa os bytes e renderiza. Mas anotar como dívida técnica para limpeza futura (renomear para extensão correta + atualizar `constants.ts` e `BackgroundCrossfade.tsx`).
+
+Após a troca, testar visualmente cada seção via `npm run dev` — se o ponto focal mudou, ajustar `pos` (object-position) em `BackgroundCrossfade.tsx`.
 
 ---
 
@@ -151,6 +176,8 @@ Seções com fundo sólido (sem imagem): `#impacto`, `#contato`.
 
 ## Pendente
 
-- [ ] Imagens reais Autha/SC — substituir stock em `public/images/sections/`
+- [x] ~~Imagens reais Autha/SC — substituir stock em `public/images/sections/`~~ (17/04/2026 — substituídas a partir de `imagens-boas/`)
+- [ ] Dívida técnica: `assistencia-pericia-mapa.jpg` é na verdade um PNG com extensão `.jpg` — converter ou renomear + atualizar `constants.ts:117` e `BackgroundCrossfade.tsx:26`
+- [ ] Revisar `pos` (object-position) em `BackgroundCrossfade.tsx` para as imagens novas — pontos focais podem ter mudado
 - [ ] Lighthouse audit — `npm run build && npx lighthouse http://localhost:3000`
 - [ ] Teste iOS Safari — `position: fixed` tem quirks no Safari (testar crossfade)

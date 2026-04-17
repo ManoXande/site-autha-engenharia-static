@@ -6,18 +6,21 @@ interface LoadingScreenProps {
   onComplete?: () => void;
 }
 
+const LOADING_FADE_DELAY_MS = 450;
+const LOADING_DONE_DELAY_MS = 850;
+
 export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   const [phase, setPhase] = useState<"visible" | "fading" | "done">("visible");
 
   useEffect(() => {
     const fadeTimer = setTimeout(() => {
       setPhase("fading");
-    }, 1600);
+    }, LOADING_FADE_DELAY_MS);
 
     const doneTimer = setTimeout(() => {
       setPhase("done");
       onComplete?.();
-    }, 2000);
+    }, LOADING_DONE_DELAY_MS);
 
     return () => {
       clearTimeout(fadeTimer);
