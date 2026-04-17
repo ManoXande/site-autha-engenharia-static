@@ -164,7 +164,7 @@ Este briefing **NÃO** cobre:
 | WhatsApp | (49) 99971-9388 |
 | Endereço | Av. Fernando Machado, 703-D, Sala 01, Centro, Chapecó/SC |
 | Instagram | @authamap |
-| Site | autha.com.br |
+| Site | autha.eng.br |
 | Slogan | Engenharia de Precisão Guiada pela Sua Perspectiva |
 | Lema | Mapear melhor é decidir melhor |
 

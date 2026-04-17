@@ -37,12 +37,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Autha Engenharia e Mapeamento" }],
   creator: "Autha Engenharia e Mapeamento",
   publisher: "Autha Engenharia e Mapeamento",
-  metadataBase: new URL("https://autha.com.br"),
+  metadataBase: new URL("https://autha.eng.br"),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://autha.com.br",
+    url: "https://autha.eng.br",
     title: "Autha Engenharia — Mapeamento e Regularização Fundiária",
     description:
       "Tecnologia LiDAR, drones e software AuthaGrid para proteger, regularizar e valorizar seu patrimônio em qualquer território do Brasil.",
@@ -86,12 +86,12 @@ const schemaOrg = {
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "https://autha.com.br/#business",
+      "@id": "https://autha.eng.br/#business",
       name: COMPANY.name,
       alternateName: "Autha Engenharia",
       description:
         "Engenharia de precisão com tecnologia LiDAR, drones e software AuthaGrid para mapeamento, regularização fundiária e inteligência ambiental.",
-      url: "https://autha.com.br",
+      url: "https://autha.eng.br",
       telephone: "+554999719388",
       email: COMPANY.email,
       foundingDate: COMPANY.founding,
@@ -135,22 +135,22 @@ const schemaOrg = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://autha.com.br/#website",
-      url: "https://autha.com.br",
+      "@id": "https://autha.eng.br/#website",
+      url: "https://autha.eng.br",
       name: "Autha Engenharia",
       description: "Site institucional da Autha Engenharia e Mapeamento",
-      publisher: { "@id": "https://autha.com.br/#business" },
+      publisher: { "@id": "https://autha.eng.br/#business" },
       inLanguage: "pt-BR",
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://autha.com.br/#breadcrumb",
+      "@id": "https://autha.eng.br/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://autha.com.br/",
+          item: "https://autha.eng.br/",
         },
       ],
     },

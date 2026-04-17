@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://autha.com.br/sitemap.xml
+Sitemap: https://autha.eng.br/sitemap.xml

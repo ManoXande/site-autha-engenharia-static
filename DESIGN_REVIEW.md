@@ -121,7 +121,7 @@ Em mobile, o texto "Fale no WhatsApp" aparece ao lado do ícone, consumindo espa
 3. **Fix imediato:** Corrigir largura do CTA hero no desktop
 4. **Conteúdo:** Substituir imagens placeholder por fotos reais Autha/SC
 5. **Validação:** Re-rodar `/design-review` após os fixes acima
-6. **Deploy:** Configurar domínio `autha.com.br` com Vercel ou similar
+6. **Deploy:** Configurar domínio `autha.eng.br` com Vercel ou similar
 
 ---
 

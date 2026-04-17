@@ -43,7 +43,7 @@ def create_og_image():
     draw.text((text_x, text_y), slogan, fill=TEXT_WHITE, font=font)
 
     # Website URL at bottom
-    url = "autha.com.br"
+    url = "autha.eng.br"
     try:
         font_url = ImageFont.truetype("C:/Windows/Fonts/segoeui.ttf", 28)
     except:

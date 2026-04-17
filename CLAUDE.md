@@ -170,7 +170,7 @@ Após a troca, testar visualmente cada seção via `npm run dev` — se o ponto 
 | Endereço | Av. Fernando Machado, 703-D, Sala 01, Centro, Chapecó/SC |
 | CEP | 89802-111 |
 | Instagram | @authamap |
-| Site | autha.com.br |
+| Site | autha.eng.br |
 
 ---
 

@@ -14,7 +14,7 @@ export const COMPANY = {
   address: "Av. Fernando Machado, 703-D, Sala 01, Centro",
   city: "Chapecó, SC",
   cep: "89802-111",
-  siteUrl: "https://autha.com.br",
+  siteUrl: "https://autha.eng.br",
   founding: "2020",
 } as const;
 

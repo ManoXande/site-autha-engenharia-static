@@ -77,7 +77,7 @@ public/
 | Endereço | Av. Fernando Machado, 703-D, Sala 01, Centro, Chapecó/SC |
 | CEP | 89802-111 |
 | Instagram | @authamap |
-| Site | autha.com.br |
+| Site | autha.eng.br |
 | Slogan | Engenharia de Precisão Guiada pela Sua Perspectiva |
 
 ## Seções (ordem)
