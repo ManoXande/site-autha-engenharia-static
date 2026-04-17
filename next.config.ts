@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   images: {
+    // Static export requires unoptimized images (no Next.js image server)
+    unoptimized: true,
     // AVIF first (40% smaller than WebP), WebP fallback
     formats: ["image/avif", "image/webp"],
     // 1-year cache for immutable assets
