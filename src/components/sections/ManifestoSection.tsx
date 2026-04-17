@@ -11,6 +11,7 @@ export function ManifestoSection() {
     >
       <SectionBackground
         imageSrc="/images/sections/manifesto-authagraph.jpg"
+        imageAlt="Mapa cartografico da Autha Engenharia -- manifesto da empresa"
         overlayVariant="none"
         objectPosition="center center"
         crossfadeManaged={true}

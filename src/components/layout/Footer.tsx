@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { COMPANY } from "@/lib/constants";
 
 const LINK_STYLE: React.CSSProperties = {
@@ -174,6 +175,17 @@ export function Footer() {
             >
               CNPJ {COMPANY.cnpj}
             </p>
+            <Link
+              href="/politica-de-privacidade/"
+              className="text-xs text-[var(--text-muted)] transition-colors hover:text-[var(--color-primary)]"
+              style={{
+                fontFamily: "var(--font-text)",
+                fontWeight: 300,
+                textDecoration: "none",
+              }}
+            >
+              Politica de Privacidade
+            </Link>
           </div>
         </div>
       </div>

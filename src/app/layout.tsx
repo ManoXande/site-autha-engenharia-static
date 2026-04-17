@@ -142,6 +142,18 @@ const schemaOrg = {
       publisher: { "@id": "https://autha.com.br/#business" },
       inLanguage: "pt-BR",
     },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://autha.com.br/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://autha.com.br/",
+        },
+      ],
+    },
   ],
 };
 
