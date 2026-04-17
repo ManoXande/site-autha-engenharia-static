@@ -40,13 +40,6 @@ export function ContactSection() {
         background: "radial-gradient(ellipse at center top, rgba(74,222,128,0.04) 0%, transparent 70%)",
       }} />
 
-      {/* ── Decorative horizontal rule ── */}
-      <div aria-hidden="true" style={{
-        position: "absolute", top: "50%", left: 0, right: 0, height: "1px",
-        background: "linear-gradient(90deg, transparent 0%, rgba(74,222,128,0.06) 20%, rgba(74,222,128,0.10) 50%, rgba(74,222,128,0.06) 80%, transparent 100%)",
-        zIndex: 1, pointerEvents: "none",
-      }} />
-
       <div
         className="section-content flex flex-col justify-center min-h-[100dvh] py-24"
         style={{ position: "relative", zIndex: 10 }}
@@ -91,9 +84,10 @@ export function ContactSection() {
               fontFamily: "var(--font-display)",
               fontWeight: 700,
               fontSize: "clamp(34px, 6.8vw, 80px)",
-              lineHeight: 1.02,
+              lineHeight: 1.15,
               letterSpacing: "-0.03em",
               marginBottom: "32px",
+              paddingBottom: "0.08em",
             }}
               className="text-gradient"
             >
@@ -104,35 +98,17 @@ export function ContactSection() {
           {/* Body */}
           <FadeUp delay={0.28}>
             <div style={{ maxWidth: "560px", margin: "0 auto 44px" }}>
-              {/* Horizontal line passing through the phrase */}
-              <div style={{ position: "relative", margin: "0 0 20px" }}>
-                <div aria-hidden="true" style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: 0,
-                  right: 0,
-                  height: "1px",
-                  background: "linear-gradient(90deg, transparent 0%, rgba(74,222,128,0.22) 20%, rgba(74,222,128,0.38) 50%, rgba(74,222,128,0.22) 80%, transparent 100%)",
-                  transform: "translateY(-50%)",
-                  pointerEvents: "none",
-                }} />
-                <p style={{
-                  fontFamily: "var(--font-text)",
-                  fontSize: "clamp(14px, 1.15vw, 17px)",
-                  color: "var(--text-primary)",
-                  lineHeight: 2,
-                  textAlign: "center",
-                  position: "relative",
-                }}>
-                  <span style={{
-                    background: "var(--bg-deep)",
-                    padding: "0 16px",
-                    letterSpacing: "0.01em",
-                  }}>
-                    Sem formulário. Sem fila de atendimento. Sua mensagem chega.
-                  </span>
-                </p>
-              </div>
+              <p style={{
+                fontFamily: "var(--font-text)",
+                fontSize: "clamp(14px, 1.15vw, 17px)",
+                color: "var(--text-primary)",
+                lineHeight: 1.7,
+                textAlign: "center",
+                letterSpacing: "0.01em",
+                marginBottom: "20px",
+              }}>
+                Sem formulário. Sem fila de atendimento. Sua mensagem chega.
+              </p>
 
               <p style={{
                 fontFamily: "var(--font-text)",
@@ -169,20 +145,6 @@ export function ContactSection() {
             </div>
           </FadeUp>
 
-          {/* Reassurance line */}
-          <FadeUp delay={0.44}>
-            <p style={{
-              fontFamily: "var(--font-text)",
-              fontSize: "12px",
-              textTransform: "uppercase",
-              letterSpacing: "0.16em",
-              color: "var(--text-muted)",
-              marginTop: "20px",
-              marginBottom: 0,
-            }}>
-              Seg – Sex · 8h às 18h
-            </p>
-          </FadeUp>
         </div>
       </div>
     </section>

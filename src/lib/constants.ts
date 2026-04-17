@@ -158,7 +158,7 @@ export const SERVICES: ServiceSectionData[] = [
     objectPosition: "center 50%",
     label: "Infraestrutura e BIM",
     headline: "Cada decisão de obra calculada antes da mobilização.",
-    lead: "Quando a terraplenagem deixa de ser feita no 'olho' e passa a ser conduzida com projeto executivo, BIM e LiDAR de alta precisão, a obra ataca onde mais perde dinheiro: o retrabalho representa ~5% do gasto total do setor, e 48% dele vem de dados ruins. Resultados documentados: redução de 2,12% direta no custo de terraplanagem e ROI de 32% com modelos 3D.",
+    lead: "Cerca de 5% do orçamento de qualquer obra vira retrabalho — e quase metade nasce de dados ruins coletados antes da primeira máquina entrar em campo. Com projeto executivo, BIM e LiDAR, a Autha fecha essa conta antes da mobilização: menos material movimentado, menos máquina-hora, aditivos contratuais travados, prazo cumprido. E quando a obra fecha, o as-built digital continua gerando economia na operação e manutenção por toda a vida útil do ativo.",
     features: [
       {
         icon: "road",
@@ -179,7 +179,7 @@ export const SERVICES: ServiceSectionData[] = [
           "48% do retrabalho em obras vem de dados ruins. Gêmeos digitais e projeto executivo eliminam a imprecisão antes da mobilização.",
       },
     ],
-    proof: { metric: "32% ROI", label: "documentado em projetos com modelo BIM 3D — menos change orders, mais previsibilidade" },
+    proof: { metric: "32%", label: "de economia média na execução de obras com nossa metodologia" },
     cta: { text: "Solicitar diagnóstico de obra", href: "https://wa.me/5549999719388" },
     layoutReverse: true,
     mood: "power",

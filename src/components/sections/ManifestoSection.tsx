@@ -78,20 +78,15 @@ export function ManifestoSection() {
                 >
                   O nome{" "}
                   <strong className="text-primary font-medium">Autha</strong> vem do{" "}
-                  <strong className="text-primary font-medium">AuthaGraph</strong> — a
-                  projeção cartográfica japonesa que corrigiu as distorções do mapa de
-                  Mercator, onde a{" "}
-                  <strong className="text-primary font-medium">Groenlândia</strong>{" "}
-                  parece do tamanho da{" "}
-                  <strong className="text-primary font-medium">África</strong>,
-                  mas a África é 14 vezes maior. No mesmo mapa, o{" "}
-                  <strong className="text-primary font-medium">Brasil</strong> — maior
-                  país do hemisfério sul — aparece espremido e diminuído, e a{" "}
-                  <strong className="text-primary font-medium">
-                    Ilha de Santa Catarina
-                  </strong>
-                  , com suas 54 praias e mais de 500 mil habitantes, some como um grão
-                  de areia no Atlântico.
+                  <strong className="text-primary font-medium">AuthaGraph</strong> — projeção
+                  criada pelo arquiteto japonês{" "}
+                  <strong className="text-primary font-medium">Hajime Narukawa</strong>{" "}
+                  que rompeu com 450 anos de Mapa de Mercator. Narukawa não buscou uma
+                  fórmula melhor:{" "}
+                  <strong className="text-primary font-medium">questionou a premissa</strong>.
+                  Levou o globo para a terceira dimensão, desdobrou em plano — e o mundo
+                  enfim apareceu como é. Não foi precisão a mais. Foi{" "}
+                  <strong className="text-primary font-medium">um método completamente novo</strong>.
                 </p>
 
                 <p
@@ -103,20 +98,14 @@ export function ManifestoSection() {
                     lineHeight: 1.75,
                   }}
                 >
-                  Assim como o AuthaGraph{" "}
+                  É esse espírito que carregamos. O mercado aprimora a trena há décadas —{" "}
+                  <strong className="text-primary font-medium">a Autha trocou de dimensão</strong>.
+                  AuthaGrid, LiDAR e uma equipe que integra engenharia, jurídico e ambiental
+                  em fluxo único, do campo ao cartório. Como Narukawa, não entregamos uma
+                  versão melhor do que já existia.{" "}
                   <strong className="text-primary font-medium">
-                    questionou a forma tradicional de enxergar o mundo
+                    Entregamos a verdade do território.
                   </strong>
-                  , nós questionamos a forma tradicional de fazer{" "}
-                  <strong className="text-primary font-medium">
-                    engenharia territorial
-                  </strong>
-                  . Não se trata apenas de medir áreas, e sim de entender o território
-                  como um{" "}
-                  <strong className="text-primary font-medium">
-                    sistema completo
-                  </strong>
-                  : técnico, legal, econômico e estratégico.
                 </p>
               </div>
             </FadeUp>

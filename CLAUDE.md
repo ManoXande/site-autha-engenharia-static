@@ -56,9 +56,42 @@ Todo conteúdo editorial fica em `src/lib/constants.ts`:
 
 Para **adicionar/editar um serviço**, editar o array `SERVICES` em `constants.ts` e adicionar a entrada correspondente em `SECTIONS` em `BackgroundCrossfade.tsx`.
 
+### Tipografia
+
+Fontes customizadas declaradas via `@font-face` em `globals.css` (não via `next/font`):
+- `"Atyp Display"` → `font-display` (Tailwind class) — headings
+- `"Atyp Text"` → `font-text` (Tailwind class) — corpo
+- Arquivos em `public/fonts/` (`.woff2` + `.ttf`)
+- `AtypDisplay-Bold.woff2` e `AtypText-Regular.woff2` são preloaded no `<head>` em `layout.tsx`
+
 ### Path Alias
 
 `@/*` → `./src/*` (configurado em `tsconfig.json`)
+
+### Utilitário de classes
+
+`cn(...classes)` em `src/lib/utils.ts` — substitui `clsx`/`twMerge` com um `filter(Boolean).join(" ")` simples.
+
+### Provider tree (layout.tsx)
+
+```
+LenisProvider
+  GSAPScrollProvider
+    BackgroundCrossfade   ← fixed z-0, fora do <main>
+    grain-fixed div       ← textura de grão, fixed
+    LoadingScreenWrapper
+    CursorFollower
+    ProgressBar
+    Header
+    <main>{children}</main>
+    Footer
+    SectionIndicator
+    WhatsAppButton
+```
+
+### SEO
+
+`layout.tsx` emite Schema.org `LocalBusiness` + `WebSite` via `<script type="application/ld+json">`. Dados puxados de `COMPANY` em `constants.ts`. OG image esperada em `public/images/og-image.jpg` (1200×630).
 
 ---
 
